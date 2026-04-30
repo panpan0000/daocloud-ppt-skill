@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Office temporary files
+~$*.pptx
+
+# Generated presentations
+cc.pptx
+cc_skill.pptx
+
+# Generated assets and knowledge base files
+bg.png
+extracted_company_assets/
+template_knowledge_base.json
+template_knowledge_base_skill.json
+
+# Packaging artifacts
+dist/
