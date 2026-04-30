@@ -80,6 +80,8 @@ Single package mode (always include `PPT_Template.pptx`):
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
 make package-openclaw
+make demo-pages
+make extract-catalog
 ```
 
 Output:

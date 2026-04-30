@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import argparse
+import asyncio
 from pathlib import Path
 from typing import Any
 
@@ -37,6 +39,26 @@ def _fill_placeholders(slide, texts: list[str]) -> None:
         placeholders[i][1].text = text
 
 
+def _retain_slide_indices(prs: Presentation, keep_indices: set[int]) -> None:
+    sld_id_lst = prs.slides._sldIdLst
+    for idx in range(len(prs.slides) - 1, -1, -1):
+        if idx in keep_indices:
+            continue
+        sld_id = sld_id_lst[idx]
+        rel_id = sld_id.rId
+        prs.part.drop_rel(rel_id)
+        del sld_id_lst[idx]
+
+
+def _build_examples_from_template(template_path: Path, output_path: Path) -> int:
+    prs = Presentation(str(template_path))
+    # 0: cover, 1: toc, 2: section, 3: content, 21: chart sample, 55: end
+    keep = {0, 1, 2, 3, 21, 55}
+    _retain_slide_indices(prs, keep)
+    prs.save(str(output_path))
+    return len(prs.slides)
+
+
 async def handler(input: dict[str, Any], context: Any) -> dict[str, Any]:
     skill_root = Path(__file__).resolve().parent.parent
     template_file = input.get("template_file") or "PPT_Template.pptx"
@@ -44,6 +66,7 @@ async def handler(input: dict[str, Any], context: Any) -> dict[str, Any]:
     if not template_path.exists():
         raise FileNotFoundError(f"Template not found: {template_path}")
 
+    mode = input.get("mode", "basic")
     title = input.get("title", "Demo Deck")
     toc_items = input.get("toc_items", ["Background", "Solution", "Plan"])
     section_title = input.get("section_title", "Section - Overview")
@@ -51,6 +74,14 @@ async def handler(input: dict[str, Any], context: Any) -> dict[str, Any]:
     content_body = input.get("content_body", "This slide is generated with template reuse.")
     output_filename = input.get("output_filename", "openclaw_generated.pptx")
     output_path = skill_root / output_filename
+
+    if mode == "examples":
+        slide_count = _build_examples_from_template(template_path, output_path)
+        return {
+            "output_path": str(output_path.resolve()),
+            "slide_count": slide_count,
+            "message": "Example slides generated from template sample pages",
+        }
 
     prs = Presentation(str(template_path))
     _clear_all_slides(prs)
@@ -77,3 +108,26 @@ async def handler(input: dict[str, Any], context: Any) -> dict[str, Any]:
         "slide_count": len(prs.slides),
         "message": "PPT generated successfully",
     }
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run ppt-template-builder locally.")
+    parser.add_argument("--mode", default="basic", choices=["basic", "examples"])
+    parser.add_argument("--title", default="Demo Deck")
+    parser.add_argument("--output", default="openclaw_generated.pptx")
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = _parse_args()
+    payload = {
+        "mode": args.mode,
+        "title": args.title,
+        "output_filename": args.output,
+    }
+    result = asyncio.run(handler(payload, None))
+    print(result)
+
+
+if __name__ == "__main__":
+    main()

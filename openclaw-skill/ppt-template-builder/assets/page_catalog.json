@@ -1,0 +1,1552 @@
+{
+  "template_file": "PPT_Template.pptx",
+  "slide_count": 56,
+  "layout_count": 15,
+  "pages": [
+    {
+      "index": 0,
+      "layout_name": "封面_Cover",
+      "page_type_guess": "cover",
+      "sample_texts": [
+        "道客 PPT 模版暗黑系 V1.1",
+        "Published By DC Design Team   / 2024.05"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        },
+        {
+          "idx": 1,
+          "name": "Subtitle 2"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 2,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 1,
+      "layout_name": "目录页_Content",
+      "page_type_guess": "toc",
+      "sample_texts": [
+        "目录",
+        "Content",
+        "色板定义 / 文本关系 / 时间轴 / 数据图形 / 标语 / 其他资源"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 16"
+        },
+        {
+          "idx": 11,
+          "name": "文本占位符 17"
+        },
+        {
+          "idx": 12,
+          "name": "文本占位符 12"
+        }
+      ],
+      "shape_stats": {
+        "total": 3,
+        "placeholder": 3,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 2,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "色板定义 - Color Palettes",
+        "道客绿主色与六个辅助色",
+        "Part",
+        "01"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 2"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 3"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 3,
+      "layout_name": "标准内容页（小标题）_Standard page with subtitle",
+      "page_type_guess": "content",
+      "sample_texts": [
+        "请优先使用本模版中定义好的页面，不推荐自行配色； / 用色需谨慎且克制，推荐优先使用主绿（Primary Green）与第一辅助色（Dark Grey），如不是必须，不轻易增加用色； / 如果自定义页面有配色需求，请使用右侧定义色板中的颜色。",
+        "色板",
+        "色板使用规则"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        },
+        {
+          "idx": 1,
+          "name": "内容占位符 2"
+        },
+        {
+          "idx": 14,
+          "name": "文本占位符 8"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 3,
+        "picture": 1,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 4,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "文本关系 - Text Layout",
+        "文本关系与图文结构",
+        "Part",
+        "02"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 2"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 3"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 5,
+      "layout_name": "副章节页_Sub section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "文本关系 - Text Layout",
+        "文本关系",
+        "Part",
+        "02-01"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        },
+        {
+          "idx": 1,
+          "name": "文本占位符 2"
+        },
+        {
+          "idx": 10,
+          "name": "文本占位符 3"
+        },
+        {
+          "idx": 11,
+          "name": "文本占位符 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 6,
+      "layout_name": "标准内容页_Standard page",
+      "page_type_guess": "content",
+      "sample_texts": [
+        "点击左上角「开始 > 新建幻灯片旁的下拉箭头」，选择母版“标准内容页_Standard page”添加 / 中文字体建议使用：微软雅黑（不可商用，可用于内部分享）、Noto Sans SC（可商用，可用于商业目的演示） / 英文字体建议使用：Arial（不可商用，可用于内部分享）",
+        "母版“标准内容页” （仅标题与正文） 示例"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 2"
+        },
+        {
+          "idx": 1,
+          "name": "内容占位符 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 2,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 7,
+      "layout_name": "1_标准内容页@大字号版_Standard page@larger",
+      "page_type_guess": "content",
+      "sample_texts": [
+        "正文内容（20 号字）",
+        "母版“标准内容页” （仅标题与正文） 示例 @大字号版"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 3"
+        },
+        {
+          "idx": 1,
+          "name": "内容占位符 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 2,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 8,
+      "layout_name": "标准内容页（小标题）_Standard page with subtitle",
+      "page_type_guess": "content",
+      "sample_texts": [
+        "正文内容（14号字）",
+        "母版“标准内容页（小标题）”示例",
+        "副标题 – Subtitle（18号字）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 2"
+        },
+        {
+          "idx": 1,
+          "name": "Content Placeholder 1"
+        },
+        {
+          "idx": 14,
+          "name": "Text Placeholder 3"
+        }
+      ],
+      "shape_stats": {
+        "total": 3,
+        "placeholder": 3,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 9,
+      "layout_name": "1_标准内容页（小标题）@大字号版_Standard page with subtitle@larger",
+      "page_type_guess": "content",
+      "sample_texts": [
+        "正文内容（20 号字）",
+        "母版“标准内容页（小标题）”示例 @大字号版",
+        "副标题 – Subtitle （24 号字）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 2"
+        },
+        {
+          "idx": 1,
+          "name": "Content Placeholder 1"
+        },
+        {
+          "idx": 14,
+          "name": "Text Placeholder 3"
+        }
+      ],
+      "shape_stats": {
+        "total": 3,
+        "placeholder": 3,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 10,
+      "layout_name": "副章节页_Sub section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "文本关系 - Text Layout",
+        "图文结构",
+        "Part",
+        "02-02"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        },
+        {
+          "idx": 1,
+          "name": "文本占位符 2"
+        },
+        {
+          "idx": 10,
+          "name": "文本占位符 3"
+        },
+        {
+          "idx": 11,
+          "name": "文本占位符 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 5,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 5
+      }
+    },
+    {
+      "index": 11,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend, arcu id ullamcorper dignissim, elit urna malesuada",
+        "图片和文字结合（上下结构）示例"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 3"
+        }
+      ],
+      "shape_stats": {
+        "total": 3,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 12,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "图片和文字结合（左右结构）示例",
+        "小标题",
+        "本页使用母版“标准内容页_Standard Page” / 复制本示例样板页，并在此处替换描述文字"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 13,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "三列内容展示（部分内容高亮）",
+        "Add title here",
+        "Add title here",
+        "Add title here",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit  / Maecenas porttitor congue massa magna Fusce posuere, magna sed pulvinar ultricie"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 14,
+        "placeholder": 1,
+        "picture": 1,
+        "table": 0,
+        "chart": 0,
+        "group": 2,
+        "textbox_or_text": 11
+      }
+    },
+    {
+      "index": 14,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "三列内容展示（并列层级）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 15,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "多列内容展示（并列层级）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 16,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "时间轴 - Timeline",
+        "年度时间轴、季度时间轴",
+        "Part",
+        "03"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 2"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 3"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 17,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "时间轴 1（年度）",
+        "Headline / Body copy. Lorem ipsum dolor sit amet",
+        "2016",
+        "2017",
+        "2018"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 23,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 7,
+        "textbox_or_text": 16
+      }
+    },
+    {
+      "index": 18,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "时间轴 2（年度）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 19,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "时间轴 3（季度）",
+        "2022 Q4",
+        "Add title here",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, urna sed dictum rutrum, odio dui volutpat odio, sit amet imperdiet",
+        "2023 Q1"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 18,
+        "placeholder": 1,
+        "picture": 1,
+        "table": 0,
+        "chart": 0,
+        "group": 3,
+        "textbox_or_text": 14
+      }
+    },
+    {
+      "index": 20,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "数据图形 - Charts, Table, Map",
+        "包含环形图、柱状图、面积图、表格、地图等",
+        "Part",
+        "04"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 2"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 3"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 4"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 21,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "饼状图（单色对比）",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 22,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "饼状图（多色对比）",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 5,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 1,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 23,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "柱状图横向（单色）",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 24,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "柱状图纵向（单色）",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 25,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "柱状图（多色）",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 5,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 1,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 26,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "面积图",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 0,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 27,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "折线图",
+        "这里是小标题",
+        "Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer eleifend / Lorem ipsumdolor sit amet, consectetur adipiscing elit. Integer e"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 5,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 1,
+        "textbox_or_text": 3
+      }
+    },
+    {
+      "index": 28,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "表格"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 7"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 1,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 29,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "表格（单列高亮）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 1,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 30,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "表格（单行高亮）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 7"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 1,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 31,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 1"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 32,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 2",
+        "Heading 4 / Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, urna sed dictum rutrum, odio dui volutpat odio, sit am",
+        "Heading 1 / Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, urna sed dictum rutrum, odio dui volutpat odio, sit am",
+        "Heading 3 / Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis, urna sed dictum rutrum, odio dui volutpat odio, sit am"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 6,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 1,
+        "group": 1,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 33,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 3",
+        "Heading",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Heading",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 9,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 9
+      }
+    },
+    {
+      "index": 34,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 4",
+        "Heading",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 23,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 23
+      }
+    },
+    {
+      "index": 35,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 5",
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lorem ipsum",
+        "Lore ipsum"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 21,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 13
+      }
+    },
+    {
+      "index": 36,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 6",
+        "Lorem Ipsum\u000bNeque porro quisquam est qui dolorem ipsum quia,",
+        "Lorem Ipsum, Neque porro quisquam est qui dolorem ipsum quia, Lorem Ipsum, Neque porro quisquam est qui",
+        "Lorem Ipsum\u000bNeque porro quisquam est qui",
+        "Lorem Ipsum\u000bNeque porro quisquam est qui dolorem ipsum quia,"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 10,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 9
+      }
+    },
+    {
+      "index": 37,
+      "layout_name": "仅标题（带背景）_Title only with bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 7"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 38,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "其他图例 8"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 3,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 39,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "世界地图（单色高亮）"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 5,
+        "placeholder": 1,
+        "picture": 3,
+        "table": 0,
+        "chart": 0,
+        "group": 1,
+        "textbox_or_text": 1
+      }
+    },
+    {
+      "index": 40,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "标语 - Slogan",
+        "黑白两底标语",
+        "05",
+        "Part"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 3"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 4"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 6"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 5"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 41,
+      "layout_name": "标语_Slogan_Dark",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "Keyword",
+        "Slide"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "标题 1"
+        },
+        {
+          "idx": 10,
+          "name": "文本占位符 2"
+        }
+      ],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 2,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 42,
+      "layout_name": "标语_Slogan_Light",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "Keyword",
+        "Slide"
+      ],
+      "placeholder_schema": [],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 0,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 2
+      }
+    },
+    {
+      "index": 43,
+      "layout_name": "章节页_Section page",
+      "page_type_guess": "section",
+      "sample_texts": [
+        "其他资源 - Resources",
+        "架构图，图标，Logo",
+        "Part",
+        "06"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 3"
+        },
+        {
+          "idx": 1,
+          "name": "Text Placeholder 4"
+        },
+        {
+          "idx": 10,
+          "name": "Text Placeholder 5"
+        },
+        {
+          "idx": 11,
+          "name": "Text Placeholder 6"
+        }
+      ],
+      "shape_stats": {
+        "total": 4,
+        "placeholder": 4,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 4
+      }
+    },
+    {
+      "index": 44,
+      "layout_name": "空白页_Empty",
+      "page_type_guess": "generic",
+      "sample_texts": [],
+      "placeholder_schema": [],
+      "shape_stats": {
+        "total": 2,
+        "placeholder": 0,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 2,
+        "textbox_or_text": 0
+      }
+    },
+    {
+      "index": 45,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "产品图标",
+        "Ghippo",
+        "应用工作台",
+        "Kpanda"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 96,
+        "placeholder": 1,
+        "picture": 36,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 60
+      }
+    },
+    {
+      "index": 46,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "常用概念图标 1",
+        "user",
+        "privilege-admin",
+        "user-defined"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 102,
+        "placeholder": 1,
+        "picture": 50,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 52
+      }
+    },
+    {
+      "index": 47,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "常用概念图标 2",
+        "metrics",
+        "log",
+        "trace-tracking"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 102,
+        "placeholder": 1,
+        "picture": 50,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 52
+      }
+    },
+    {
+      "index": 48,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "chart_or_data",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "常用概念图标 3",
+        "slide-right",
+        "update-log",
+        "report"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 102,
+        "placeholder": 1,
+        "picture": 50,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 52
+      }
+    },
+    {
+      "index": 49,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "常用概念图标 4",
+        "remove",
+        "skip",
+        "stopped"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 122,
+        "placeholder": 1,
+        "picture": 60,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 62
+      }
+    },
+    {
+      "index": 50,
+      "layout_name": "仅标题（无背景）_Title only without bg",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "DCE5.0 产品相关图标",
+        "常用概念图标 5",
+        "task-center",
+        "resources",
+        "line-up-mgmt"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 54,
+        "placeholder": 1,
+        "picture": 26,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 28
+      }
+    },
+    {
+      "index": 51,
+      "layout_name": "1_仅标题（无背景）_Title only without bg@White",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "critical",
+        "high",
+        "major",
+        "warning",
+        "failed"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 78,
+        "placeholder": 1,
+        "picture": 38,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 40
+      }
+    },
+    {
+      "index": 52,
+      "layout_name": "1_仅标题（无背景）_Title only without bg@White",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "云产品相关服务提供商 Logo",
+        "中间件",
+        "RabbitMQ",
+        "Elasticserach",
+        "MySQL"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 53,
+        "placeholder": 1,
+        "picture": 25,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 28
+      }
+    },
+    {
+      "index": 53,
+      "layout_name": "1_仅标题（无背景）_Title only without bg@White",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "Istio",
+        "Prometheus",
+        "Tidb",
+        "Pulsar",
+        "Karmada"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 102,
+        "placeholder": 1,
+        "picture": 50,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 52
+      }
+    },
+    {
+      "index": 54,
+      "layout_name": "1_仅标题（无背景）_Title only without bg@White",
+      "page_type_guess": "generic",
+      "sample_texts": [
+        "kdoctor",
+        "Windows",
+        "Pytorch",
+        "TensorFlow",
+        "Java"
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 0,
+          "name": "Title 1"
+        }
+      ],
+      "shape_stats": {
+        "total": 22,
+        "placeholder": 1,
+        "picture": 10,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 12
+      }
+    },
+    {
+      "index": 55,
+      "layout_name": "封底_End page",
+      "page_type_guess": "end",
+      "sample_texts": [
+        "Thanks."
+      ],
+      "placeholder_schema": [
+        {
+          "idx": 13,
+          "name": "文本占位符 32"
+        }
+      ],
+      "shape_stats": {
+        "total": 1,
+        "placeholder": 1,
+        "picture": 0,
+        "table": 0,
+        "chart": 0,
+        "group": 0,
+        "textbox_or_text": 1
+      }
+    }
+  ]
+}

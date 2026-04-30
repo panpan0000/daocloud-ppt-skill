@@ -3,7 +3,8 @@
 ## Install (local path)
 
 ```bash
-openclaw skill install --path ./openclaw-skill/ppt-template-builder
+# Put this folder under your OpenClaw skills directory, e.g.
+# ~/.openclaw/workspace/skills/ppt-template-builder
 ```
 
 ## Test
@@ -14,11 +15,21 @@ openclaw chat
 
 Try:
 - "Use ppt-template-builder to generate a deck with title Quarterly Review."
+- "Use ppt-template-builder in examples mode."
 
 ## Dependencies
 
 - python-pptx
 
 ```bash
-python3 -m pip install python-pptx
+python3 -m pip install -r requirements.txt
+```
+
+## Local Commands
+
+```bash
+cd /Users/peterpan/go/src/PPT_Builder_Skill
+make demo-pages
+make extract-catalog
+make package-openclaw
 ```
