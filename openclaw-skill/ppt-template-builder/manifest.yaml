@@ -1,0 +1,51 @@
+name: ppt-template-builder
+version: 1.0.0
+author: peterpan
+license: MIT
+runtime: python
+entry: src/index.py
+min_openclaw_version: "2026.1.0"
+description: Generate brand-consistent PPTX by reusing layouts from a corporate template.
+categories:
+  - productivity
+  - presentation
+config:
+  - key: template_file
+    type: string
+    required: false
+    default: PPT_Template.pptx
+    description: Template filename in the skill directory.
+input:
+  type: object
+  properties:
+    title:
+      type: string
+      description: Cover title text.
+    toc_items:
+      type: array
+      items:
+        type: string
+      description: TOC lines.
+    section_title:
+      type: string
+      description: Section page title.
+    content_title:
+      type: string
+      description: Content page title.
+    content_body:
+      type: string
+      description: Content page body.
+    output_filename:
+      type: string
+      description: Output pptx filename.
+  required:
+    - title
+output:
+  type: object
+  properties:
+    output_path:
+      type: string
+    slide_count:
+      type: integer
+    message:
+      type: string

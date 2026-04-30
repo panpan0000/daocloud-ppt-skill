@@ -10,9 +10,10 @@ It focuses on:
 ## Repository Structure
 
 - `daocloud-ppt.py`: project demo script that extracts assets, builds knowledge base, and generates `cc.pptx`.
-- `.trae/skills/ppt-template-builder/SKILL.md`: reusable skill definition for agent invocation.
-- `.trae/skills/ppt-template-builder/scripts/generate_from_template.py`: standalone generator script for packaging.
-- `.trae/skills/ppt-template-builder/assets/template_knowledge_base.sample.json`: sample knowledge base for distribution.
+- `openclaw-skill/ppt-template-builder/SKILL.md`: OpenClaw skill description.
+- `openclaw-skill/ppt-template-builder/manifest.yaml`: OpenClaw machine-readable manifest.
+- `openclaw-skill/ppt-template-builder/src/index.py`: skill runtime entry.
+- `Makefile`: one-command package target for OpenClaw skill zip.
 
 ## Prerequisites
 
@@ -37,19 +38,25 @@ Expected outputs:
 - `template_knowledge_base.json`
 - `extracted_company_assets/`
 
-### 2. Generate deck via skill script
+### 2. Generate deck via OpenClaw skill entry
 
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
-python3 .trae/skills/ppt-template-builder/scripts/generate_from_template.py \
-  --template PPT_Template.pptx \
-  --output cc_skill.pptx \
-  --kb template_knowledge_base_skill.json
+python3 - <<'PY'
+import asyncio
+import importlib.util
+from pathlib import Path
+p = Path("openclaw-skill/ppt-template-builder/src/index.py")
+spec = importlib.util.spec_from_file_location("skill_index", p)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+res = asyncio.run(mod.handler({"title": "OpenClaw Demo", "output_filename": "cc_skill.pptx"}, None))
+print(res)
+PY
 ```
 
 Expected outputs:
-- `cc_skill.pptx`
-- `template_knowledge_base_skill.json`
+- `openclaw-skill/ppt-template-builder/cc_skill.pptx`
 
 ## Semantic Layout Mapping
 
@@ -72,14 +79,14 @@ Single package mode (always include `PPT_Template.pptx`):
 
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
-mkdir -p dist
-zip -r dist/ppt-template-builder-openclaw.zip \
-  README.md \
-  .trae/skills/ppt-template-builder \
-  PPT_Template.pptx
+make package-openclaw
 ```
 
-Send `dist/ppt-template-builder-openclaw.zip` to other OpenClaw users.
+Output:
+- `dist/ppt-template-builder-openclaw-official.zip`
+
+Skill source directory:
+- `openclaw-skill/ppt-template-builder/`
 
 ## Git Workflow (with clash proxy env)
 
@@ -88,8 +95,8 @@ If you need to push to remote:
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
 export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897
-git add README.md daocloud-ppt.py .trae/skills/ppt-template-builder
-git commit -m "feat: add reusable ppt-template-builder skill package"
+git add README.md Makefile openclaw-skill/ppt-template-builder
+git commit -m "feat: add openclaw skill package and make target"
 git push
 ```
 
