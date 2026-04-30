@@ -16,6 +16,7 @@ openclaw chat
 Try:
 - "Use ppt-template-builder to generate a deck with title Quarterly Review."
 - "Use ppt-template-builder in examples mode."
+- "Use ppt-template-builder in complex mode."
 
 ## Dependencies
 
@@ -30,6 +31,7 @@ python3 -m pip install -r requirements.txt
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
 make demo-pages
+make demo-pages-complex
 make extract-catalog
 make package-openclaw
 ```

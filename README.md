@@ -9,10 +9,11 @@ It focuses on:
 
 ## Repository Structure
 
-- `daocloud-ppt.py`: project demo script that extracts assets, builds knowledge base, and generates `cc.pptx`.
+- `tools/template_pipeline.py`: generic template pipeline script for any company PPT template.
 - `openclaw-skill/ppt-template-builder/SKILL.md`: OpenClaw skill description.
 - `openclaw-skill/ppt-template-builder/manifest.yaml`: OpenClaw machine-readable manifest.
 - `openclaw-skill/ppt-template-builder/src/index.py`: skill runtime entry.
+- `openclaw-skill/ppt-template-builder/tools/extract_page_catalog.py`: auto archive script for full template pages.
 - `Makefile`: one-command package target for OpenClaw skill zip.
 
 ## Prerequisites
@@ -26,17 +27,17 @@ python3 -m pip install python-pptx
 
 ## Quick Start
 
-### 1. Generate demo deck from current project script
+### 1. Run generic template pipeline
 
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
-python3 daocloud-ppt.py
+make run-template-pipeline
 ```
 
 Expected outputs:
-- `cc.pptx`
+- `template_demo.pptx`
 - `template_knowledge_base.json`
-- `extracted_company_assets/`
+- `extracted_template_assets/`
 
 ### 2. Generate deck via OpenClaw skill entry
 
@@ -50,13 +51,13 @@ p = Path("openclaw-skill/ppt-template-builder/src/index.py")
 spec = importlib.util.spec_from_file_location("skill_index", p)
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
-res = asyncio.run(mod.handler({"title": "OpenClaw Demo", "output_filename": "cc_skill.pptx"}, None))
+res = asyncio.run(mod.handler({"title": "OpenClaw Demo", "mode": "examples", "output_filename": "skill_demo.pptx"}, None))
 print(res)
 PY
 ```
 
 Expected outputs:
-- `openclaw-skill/ppt-template-builder/cc_skill.pptx`
+- `openclaw-skill/ppt-template-builder/skill_demo.pptx`
 
 ## Semantic Layout Mapping
 
@@ -81,6 +82,7 @@ Single package mode (always include `PPT_Template.pptx`):
 cd /Users/peterpan/go/src/PPT_Builder_Skill
 make package-openclaw
 make demo-pages
+make demo-pages-complex
 make extract-catalog
 ```
 

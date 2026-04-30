@@ -25,12 +25,14 @@ Use this skill when the user asks:
 - "Create cover/toc/section/content/end quickly"
 
 ## Inputs
+- `mode`: `basic` | `examples` | `complex`
 - `title`: deck title
 - `toc_items`: toc lines
 - `section_title`: section page title
 - `content_title`: content page title
 - `content_body`: content body text
 - `output_filename`: output pptx filename
+- `template_file`: optional template filename in skill directory
 
 ## Output
 - `output_path`: absolute path to generated pptx
@@ -40,3 +42,5 @@ Use this skill when the user asks:
 ## Notes
 - Requires `python-pptx`.
 - Uses local `PPT_Template.pptx` in skill directory by default.
+- `examples` mode generates meaningful project-intro slides.
+- `complex` mode uses `assets/page_catalog.json` to pick richer sample pages.

@@ -6,8 +6,8 @@ from pptx import Presentation
 
 
 TEMPLATE_PATH = Path("PPT_Template.pptx")
-ASSET_DIR = Path("extracted_company_assets")
-OUTPUT_PATH = Path("cc.pptx")
+ASSET_DIR = Path("extracted_template_assets")
+OUTPUT_PATH = Path("template_demo.pptx")
 KB_PATH = Path("template_knowledge_base.json")
 
 
@@ -126,27 +126,20 @@ def create_demo_ppt_from_template(template_path: Path, output_path: Path) -> Non
     toc_layout = find_layout_by_name(prs, "目录页_Content")
     section_layout = find_layout_by_name(prs, "章节页_Section page")
     content_layout = find_layout_by_name(prs, "标准内容页（小标题）_Standard page with subtitle")
+    end_layout = find_layout_by_name(prs, "封底_End page")
 
     cover = prs.slides.add_slide(cover_layout)
-    fill_placeholders(cover, ["cc Demo Deck", "Generated from template layouts"])
+    fill_placeholders(cover, ["Template Demo Deck", "Generic workflow for any company template"])
 
     toc = prs.slides.add_slide(toc_layout)
-    fill_placeholders(toc, ["目录", "项目背景\n方案设计\n实施计划"])
+    fill_placeholders(toc, ["目录", "模板结构\n风格规范\n页面生成\n质量校验"])
 
     section = prs.slides.add_slide(section_layout)
-    fill_placeholders(section, ["项目背景 - Project Background", "本节介绍目标与范围", "01"])
+    fill_placeholders(section, ["模板复用策略 - Template Reuse", "优先复用版式与占位符", "01"])
 
     content = prs.slides.add_slide(content_layout)
-    fill_placeholders(
-        content,
-        [
-            "方案说明",
-            "这里是随便内容：本页复用模板内容页样式，保持品牌视觉一致。",
-            "副标题 - Subtitle",
-        ],
-    )
+    fill_placeholders(content, ["关键原则", "避免重绘；优先模板语义；保留品牌风格一致性。", "Principles"])
 
-    end_layout = find_layout_by_name(prs, "封底_End page")
     end = prs.slides.add_slide(end_layout)
     fill_placeholders(end, ["Thanks."])
 
@@ -159,8 +152,8 @@ def main() -> None:
 
     extracted = extract_media(TEMPLATE_PATH, ASSET_DIR)
     kb = build_template_knowledge_base(TEMPLATE_PATH, KB_PATH)
-
     create_demo_ppt_from_template(TEMPLATE_PATH, OUTPUT_PATH)
+
     print(f"Done. Generated: {OUTPUT_PATH.resolve()}")
     print(f"Extracted media count: {len(extracted)}")
     print(f"Knowledge base: {KB_PATH.resolve()}")

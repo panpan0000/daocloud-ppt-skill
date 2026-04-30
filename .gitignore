@@ -8,10 +8,13 @@
 cc.pptx
 cc_skill.pptx
 openclaw-skill/ppt-template-builder/examples_demo.pptx
+openclaw-skill/ppt-template-builder/examples_demo_complex.pptx
+template_demo.pptx
 
 # Generated assets and knowledge base files
 bg.png
 extracted_company_assets/
+extracted_template_assets/
 template_knowledge_base.json
 template_knowledge_base_skill.json
 

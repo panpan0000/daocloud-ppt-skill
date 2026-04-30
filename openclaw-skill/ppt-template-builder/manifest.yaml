@@ -18,6 +18,10 @@ config:
 input:
   type: object
   properties:
+    mode:
+      type: string
+      enum: [basic, examples, complex]
+      description: Generation mode. examples and complex create project-intro demos.
     title:
       type: string
       description: Cover title text.
@@ -38,6 +42,9 @@ input:
     output_filename:
       type: string
       description: Output pptx filename.
+    template_file:
+      type: string
+      description: Optional template filename in skill root.
   required:
     - title
 output:
