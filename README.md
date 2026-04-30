@@ -20,7 +20,7 @@
 ## Quick Start
 
 ```bash
-cd /PPT_Builder_Skill
+cd PPT_Builder_Skill
 python3 -m pip install -r openclaw-skill/ppt-template-builder/requirements.txt
 make demo-pages-xml
 make package-openclaw
