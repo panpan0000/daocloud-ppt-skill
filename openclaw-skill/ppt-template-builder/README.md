@@ -28,7 +28,7 @@ python3 -m pip install -r requirements.txt
 ## Local Commands
 
 ```bash
-cd /Users/peterpan/go/src/PPT_Builder_Skill
+cd PPT_Builder_Skill
 make demo
 make extract-catalog
 make package-openclaw
