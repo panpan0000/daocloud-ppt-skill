@@ -31,3 +31,8 @@ Outputs:
 - `openclaw-skill/corporate-ppt-generator/examples_demo_xml.pptx`
 - `dist/corporate-ppt-generator-openclaw-official.zip`
 
+## Release Download
+
+- Tag push matching `v*` triggers GitHub Actions release packaging automatically.
+- Download from GitHub Releases asset: `corporate-ppt-generator-openclaw-official.zip`.
+- First public release tag: `v0.1`.
