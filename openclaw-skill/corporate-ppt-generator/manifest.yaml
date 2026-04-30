@@ -1,11 +1,11 @@
-name: ppt-template-builder
+name: corporate-ppt-generator
 version: 1.0.0
 author: peterpan
 license: MIT
 runtime: python
 entry: src/index.py
 min_openclaw_version: "2026.1.0"
-description: Generate brand-consistent PPTX from block/xml by reusing slides from a corporate template.
+description: Generate PPT decks from prompts/block XML while keeping corporate brand style and template consistency.
 categories:
   - productivity
   - presentation

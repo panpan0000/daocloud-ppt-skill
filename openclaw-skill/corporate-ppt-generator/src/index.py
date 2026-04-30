@@ -82,16 +82,60 @@ def _iter_text_shapes(shapes):
             yield shape
 
 
+def _iter_group_shapes(shapes):
+    for shape in shapes:
+        if shape.shape_type != MSO_SHAPE_TYPE.GROUP:
+            continue
+        yield shape
+        yield from _iter_group_shapes(shape.shapes)
+
+
+def _classify_card_text(shape) -> str:
+    text = (shape.text or "").strip().lower()
+    heading_markers = ("text here", "add title here", "title here", "heading")
+    body_markers = ("lorem ipsum", "dolor sit amet", "description", "add text")
+    if any(marker in text for marker in body_markers):
+        return "body"
+    if any(marker in text for marker in heading_markers):
+        return "heading"
+    return ""
+
+
 def _fill_group_cards(slide, headings: list[str], bodies: list[str]) -> None:
     heading_shapes = []
     body_shapes = []
     for shape in _iter_text_shapes(slide.shapes):
-        text = (shape.text or "").strip().lower()
-        if "text here" in text:
+        kind = _classify_card_text(shape)
+        if kind == "heading":
             heading_shapes.append(shape)
             continue
-        if "lorem ipsum" in text:
+        if kind == "body":
             body_shapes.append(shape)
+
+    if len(heading_shapes) < len(headings) or len(body_shapes) < len(bodies):
+        card_pairs = []
+        for group in _iter_group_shapes(slide.shapes):
+            text_shapes = []
+            for child in _iter_text_shapes(group.shapes):
+                if (child.text or "").strip():
+                    text_shapes.append(child)
+            if len(text_shapes) < 2:
+                continue
+            text_shapes.sort(key=lambda s: (getattr(s, "top", 0), getattr(s, "left", 0)))
+            card_pairs.append((getattr(group, "top", 0), getattr(group, "left", 0), text_shapes[0], text_shapes[1]))
+        card_pairs.sort(key=lambda item: (item[0], item[1]))
+        if len(heading_shapes) < len(headings):
+            for _, _, heading_shape, _ in card_pairs:
+                if heading_shape not in heading_shapes:
+                    heading_shapes.append(heading_shape)
+        if len(body_shapes) < len(bodies):
+            for _, _, _, body_shape in card_pairs:
+                if body_shape not in body_shapes:
+                    body_shapes.append(body_shape)
+
+    heading_shapes.sort(key=lambda s: (getattr(s, "top", 0), getattr(s, "left", 0)))
+    body_shapes.sort(key=lambda s: (getattr(s, "top", 0), getattr(s, "left", 0)))
+
     for i, text in enumerate(headings):
         if i >= len(heading_shapes):
             break
@@ -436,7 +480,7 @@ async def handler(input: dict[str, Any], _context: Any) -> dict[str, Any]:
 
 
 def _parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run ppt-template-builder in xml mode.")
+    parser = argparse.ArgumentParser(description="Run corporate-ppt-generator in xml mode.")
     parser.add_argument("--title", default="Corporate Deck")
     parser.add_argument("--output", default="openclaw_generated_xml.pptx")
     parser.add_argument("--block-xml-file", required=True)

@@ -1,13 +1,13 @@
 ---
-name: ppt-template-builder
+name: corporate-ppt-generator
 version: 1.0.0
-description: Build brand-consistent PPTX from block/xml using a corporate PPT template.
+description: Generate PPT decks from prompts/block XML while preserving corporate brand style.
 categories:
   - productivity
   - presentation
 ---
 
-# PPT Template Builder
+# Corporate PPT Generator
 
 ## Description
 Generate a new `.pptx` by reusing existing template slides from `PPT_Template.pptx`.
@@ -15,9 +15,9 @@ The runtime is XML-only and prioritizes template-first rendering.
 
 ## When To Use
 Use this skill when the user asks:
-- "Render PPT from structured block/xml"
-- "Keep company template style (background/icon/font/layout)"
-- "Avoid html-to-ppt export as primary path"
+- "Generate a PPT from a prompt or outline"
+- "Create a deck in DaoCloud style / company brand style"
+- "Render PPT from structured block/xml with template consistency"
 
 ## Inputs
 - `title`: optional deck title fallback

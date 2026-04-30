@@ -1,10 +1,10 @@
-# OpenClaw Skill: ppt-template-builder
+# OpenClaw Skill: corporate-ppt-generator
 
 ## Install (local path)
 
 ```bash
 # Put this folder under your OpenClaw skills directory, e.g.
-# ~/.openclaw/workspace/skills/ppt-template-builder
+# ~/.openclaw/workspace/skills/corporate-ppt-generator
 ```
 
 ## Test
@@ -14,8 +14,8 @@ openclaw chat
 ```
 
 Try:
-- "Use ppt-template-builder with xml mode and render_strategy template_first."
-- "Use ppt-template-builder to render PPT from block_xml while preserving template style."
+- "Generate a PPT in DaoCloud style using corporate-ppt-generator."
+- "Use corporate-ppt-generator to render PPT from block_xml while preserving template style."
 
 ## Dependencies
 

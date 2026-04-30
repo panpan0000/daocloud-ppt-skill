@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-SKILL_NAME := ppt-template-builder
+SKILL_NAME := corporate-ppt-generator
 OPENCLAW_SKILL_DIR := openclaw-skill/$(SKILL_NAME)
 DIST_DIR := dist
 OPENCLAW_ZIP := $(DIST_DIR)/$(SKILL_NAME)-openclaw-official.zip
