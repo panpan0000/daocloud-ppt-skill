@@ -5,7 +5,7 @@ license: MIT
 runtime: python
 entry: src/index.py
 min_openclaw_version: "2026.1.0"
-description: Generate brand-consistent PPTX by reusing layouts from a corporate template.
+description: Generate brand-consistent PPTX from block/xml by reusing slides from a corporate template.
 categories:
   - productivity
   - presentation
@@ -18,41 +18,35 @@ config:
 input:
   type: object
   properties:
-    mode:
-      type: string
-      enum: [basic, examples, complex]
-      description: Generation mode. examples and complex create project-intro demos.
     title:
       type: string
-      description: Cover title text.
-    toc_items:
-      type: array
-      items:
-        type: string
-      description: TOC lines.
-    section_title:
-      type: string
-      description: Section page title.
-    content_title:
-      type: string
-      description: Content page title.
-    content_body:
-      type: string
-      description: Content page body.
+      description: Deck title used by cover fallback.
     output_filename:
       type: string
       description: Output pptx filename.
     template_file:
       type: string
       description: Optional template filename in skill root.
+    block_xml:
+      type: string
+      description: Block/XML payload for template-first rendering.
+    render_strategy:
+      type: string
+      enum: [template_first, template_only]
+      description: template_first allows fallback slides for unsupported block types.
+    allow_html_fallback:
+      type: boolean
+      description: When true, html/richtext blocks are converted to template content slides.
   required:
-    - title
+    - block_xml
 output:
   type: object
   properties:
     output_path:
       type: string
     slide_count:
+      type: integer
+    fallback_count:
       type: integer
     message:
       type: string

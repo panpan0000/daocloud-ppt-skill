@@ -14,9 +14,8 @@ openclaw chat
 ```
 
 Try:
-- "Use ppt-template-builder to generate a deck with title Quarterly Review."
-- "Use ppt-template-builder in examples mode."
-- "Use ppt-template-builder in complex mode."
+- "Use ppt-template-builder with xml mode and render_strategy template_first."
+- "Use ppt-template-builder to render PPT from block_xml while preserving template style."
 
 ## Dependencies
 
@@ -30,8 +29,15 @@ python3 -m pip install -r requirements.txt
 
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
-make demo-pages
-make demo-pages-complex
+make demo-pages-xml
 make extract-catalog
 make package-openclaw
 ```
+
+## XML Strategy
+
+- Runtime is XML-only.
+- Preferred: `render_strategy=template_first`.
+- Optional: HTML blocks are allowed as fallback and converted into template content slides.
+- Goal: keep template style (background/icon/font/layout) while letting models provide structured blocks.
+- `make demo-pages-xml` uses `assets/demo_blocks.xml` and now covers toc + matrix + pie/bar/line + table + slogan.

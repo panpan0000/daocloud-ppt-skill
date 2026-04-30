@@ -4,12 +4,12 @@ SKILL_NAME := ppt-template-builder
 OPENCLAW_SKILL_DIR := openclaw-skill/$(SKILL_NAME)
 DIST_DIR := dist
 OPENCLAW_ZIP := $(DIST_DIR)/$(SKILL_NAME)-openclaw-official.zip
-DEMO_OUTPUT := $(OPENCLAW_SKILL_DIR)/examples_demo.pptx
-COMPLEX_DEMO_OUTPUT := $(OPENCLAW_SKILL_DIR)/examples_demo_complex.pptx
+XML_DEMO_OUTPUT := $(OPENCLAW_SKILL_DIR)/examples_demo_xml.pptx
+XML_DEMO_INPUT := $(OPENCLAW_SKILL_DIR)/assets/demo_blocks.xml
 PAGE_CATALOG := $(OPENCLAW_SKILL_DIR)/assets/page_catalog.json
 TEMPLATE_PIPELINE := tools/template_pipeline.py
 
-.PHONY: package-openclaw clean-dist verify-skill-tree demo-pages demo-pages-complex extract-catalog run-template-pipeline
+.PHONY: package-openclaw clean-dist verify-skill-tree demo-pages-xml extract-catalog run-template-pipeline
 
 verify-skill-tree:
 	@test -f "$(OPENCLAW_SKILL_DIR)/SKILL.md"
@@ -22,16 +22,18 @@ package-openclaw: verify-skill-tree
 	@rm -f "$(OPENCLAW_ZIP)"
 	@cd openclaw-skill && zip -r "../$(OPENCLAW_ZIP)" "$(SKILL_NAME)" \
 		-x "*/__pycache__/*" \
-		-x "*/examples_demo.pptx" >/dev/null
+		-x "*/examples_demo.pptx" \
+		-x "*/examples_demo_complex.pptx" \
+		-x "*/examples_demo_xml.pptx" >/dev/null
 	@echo "Built: $(OPENCLAW_ZIP)"
 
-demo-pages: verify-skill-tree
-	@python3 "$(OPENCLAW_SKILL_DIR)/src/index.py" --mode examples --output "$(notdir $(DEMO_OUTPUT))"
-	@echo "Example deck: $(DEMO_OUTPUT)"
-
-demo-pages-complex: verify-skill-tree extract-catalog
-	@python3 "$(OPENCLAW_SKILL_DIR)/src/index.py" --mode complex --output "$(notdir $(COMPLEX_DEMO_OUTPUT))"
-	@echo "Complex demo deck: $(COMPLEX_DEMO_OUTPUT)"
+demo-pages-xml: verify-skill-tree
+	@python3 "$(OPENCLAW_SKILL_DIR)/src/index.py" \
+		--output "$(notdir $(XML_DEMO_OUTPUT))" \
+		--block-xml-file "$(XML_DEMO_INPUT)" \
+		--render-strategy template_first \
+		--allow-html-fallback
+	@echo "XML demo deck: $(XML_DEMO_OUTPUT)"
 
 extract-catalog: verify-skill-tree
 	@python3 "$(OPENCLAW_SKILL_DIR)/tools/extract_page_catalog.py" \
