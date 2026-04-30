@@ -29,7 +29,7 @@ python3 -m pip install -r requirements.txt
 
 ```bash
 cd /Users/peterpan/go/src/PPT_Builder_Skill
-make demo-pages-xml
+make demo
 make extract-catalog
 make package-openclaw
 ```
@@ -40,4 +40,4 @@ make package-openclaw
 - Preferred: `render_strategy=template_first`.
 - Optional: HTML blocks are allowed as fallback and converted into template content slides.
 - Goal: keep template style (background/icon/font/layout) while letting models provide structured blocks.
-- `make demo-pages-xml` uses `assets/demo_blocks.xml` and now covers toc + matrix + pie/bar/line + table + slogan.
+- `make demo` uses `assets/demo_blocks.xml` and now covers toc + matrix + pie/bar/line + table + slogan.

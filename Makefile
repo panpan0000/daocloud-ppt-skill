@@ -9,7 +9,7 @@ XML_DEMO_INPUT := $(OPENCLAW_SKILL_DIR)/assets/demo_blocks.xml
 PAGE_CATALOG := $(OPENCLAW_SKILL_DIR)/assets/page_catalog.json
 TEMPLATE_PIPELINE := tools/template_pipeline.py
 
-.PHONY: package-openclaw clean-dist verify-skill-tree demo-pages-xml extract-catalog run-template-pipeline
+.PHONY: package-openclaw clean-dist verify-skill-tree demo extract-catalog run-template-pipeline
 
 verify-skill-tree:
 	@test -f "$(OPENCLAW_SKILL_DIR)/SKILL.md"
@@ -27,7 +27,7 @@ package-openclaw: verify-skill-tree
 		-x "*/examples_demo_xml.pptx" >/dev/null
 	@echo "Built: $(OPENCLAW_ZIP)"
 
-demo-pages-xml: verify-skill-tree
+demo: verify-skill-tree
 	@python3 "$(OPENCLAW_SKILL_DIR)/src/index.py" \
 		--output "$(notdir $(XML_DEMO_OUTPUT))" \
 		--block-xml-file "$(XML_DEMO_INPUT)" \

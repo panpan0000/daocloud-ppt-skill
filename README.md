@@ -22,7 +22,7 @@
 ```bash
 cd PPT_Builder_Skill
 python3 -m pip install -r openclaw-skill/ppt-template-builder/requirements.txt
-make demo-pages-xml
+make demo
 make package-openclaw
 ```
 
@@ -31,19 +31,4 @@ Outputs:
 - `openclaw-skill/ppt-template-builder/examples_demo_xml.pptx`
 - `dist/ppt-template-builder-openclaw-official.zip`
 
-## Optional Utility
 
-```bash
-cd /Users/peterpan/go/src/PPT_Builder_Skill
-make extract-catalog
-```
-
-## Git Push (with clash proxy)
-
-```bash
-cd /Users/peterpan/go/src/PPT_Builder_Skill
-export https_proxy=http://127.0.0.1:7897 http_proxy=http://127.0.0.1:7897 all_proxy=socks5://127.0.0.1:7897
-git add README.md Makefile openclaw-skill/ppt-template-builder
-git commit -m "refactor: keep xml-only template-first skill path"
-git push
-```
